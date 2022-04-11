@@ -1,19 +1,18 @@
 //Create a constructor with 4 properties and 3 methods
 
-function Pizza(brand, size, sauce, topping) {
-    this.brand = brand;
-    this.size = size;
-    this.sauce = sauce;
-    this.topping = topping;
-    this.eat = function() {
-        console.log('takes a bite of pizza');
-    };
-    this.top = function() {
-        console.log('throws some cheese and red peppers');
-    };
-    this.burnMouth = function() {
-        console.log('HAHAAASHSHSHShshshsahshashahhaa');
-    };
+function PizzaMachine(size,toppings,crust,sauce){
+    this.size = size
+    this.toppings = toppings
+    this.crust = crust
+    this.sauce = sauce
+    this.estimatedDeliveryTime = function(){
+        console.log('Calculating...')
+    }
+    this.burnMouth = function(){
+        console.log('FJFjfkdjfkjasldkjflkd')
+    }
+    this.frisbee = function(){
+        console.log('YYYyyeeeeetttt')
+    }
 }
-
-let piz = new Pizza('domino', 'large');
+let pizza = new PizzaMachine('large',['spinach','garlic'],'deep dish','white')

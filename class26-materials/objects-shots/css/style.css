@@ -10,14 +10,10 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
-html {
-  background: gray;
-}
-
 img{
   display: block;
   margin: 0 auto;
-  width: 20%;
+  height: 200px;
 }
 
 

@@ -1,17 +1,37 @@
-//Create a dog object that has four properties and three methods
+//Create a pizza object that has four properties and three methods
 
-const pizza = {
-    toppings: ['pepperoni', 'pineapple', 'mushroom'],
-    brand: 'Dominos',
-    crust: 'cheese',
-    sauce: 'marinara',
-    eat: function() {
-        console.log('take a bite');
-    },
-    dip: function() {
-        console.log('dipped your slice in some ranch');
-    },
-    top: function() {
-        console.log('sprinkled some cheese and red pepper on your slice');
-    },
-};
+let pizzaTwo = {}
+
+pizzaTwo.size = 'small'
+pizzaTwo.toppings = ['spinach','onion','jalapenos', ,'garlic']
+pizzaTwo.crust = 'thin'
+pizzaTwo.sauce = 'normal'
+
+pizzaTwo.estimatedDeliveryTime = function(){
+    console.log('Calculating...')
+}
+pizzaTwo.burnMouth = function(){
+    console.log('FFJkadjfl;kasjdfifj')
+}
+pizzaTwo.frisbee = function(){
+    console.log('YEEEeeeetttt')
+}
+
+
+
+let pizza = {}
+
+pizza.size = 'large'
+pizza.toppings = ['spinach','onion','jalapenos', 'banana peppers','garlic']
+pizza.crust = 'stuffed'
+pizza.sauce = 'heavy'
+
+pizza.estimatedDeliveryTime = function(){
+    console.log('Calculating...')
+}
+pizza.burnMouth = function(){
+    console.log('FFJkadjfl;kasjdfifj')
+}
+pizza.frisbee = function(){
+    console.log('YEEEeeeetttt')
+}
