@@ -1,0 +1,23 @@
+h1 {
+    color: #881f9a;
+}
+
+section > h2 {
+    color: #8f201c;
+}
+
+h2 + h2 {
+    color: #416596;
+}
+
+section article h2 {
+    color: #4b0d32;
+}
+
+article > h2 {
+    color: #c23728;
+}
+
+* {
+    background: black;
+}

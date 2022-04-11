@@ -1,0 +1,96 @@
+/*
+==============================
+clearfix
+==============================
+*/
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+.group:after {
+    clear: both;
+}
+.group {
+    *zoom: 1;
+}
+/*
+==============================
+Grid
+==============================
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+body {
+    height: 100%;
+}
+/*
+==============================
+Layout
+==============================
+*/
+header,
+footer,
+section {
+    border: .1em solid black;
+    font-size: 3em;
+    text-align: center;
+}
+header,
+footer {
+    height: 20%;
+    clear: both;
+}
+section {
+    height: 30%;
+    float: left;
+}
+.primary {
+    width: 33.3333%;
+}
+.secondary {
+    width: 50%;
+}
+@media screen and (max-width: 450px) {
+    header,
+    footer {
+        height: 10%;
+        background: springgreen;
+    }
+    section.primary,
+    section.secondary {
+        width: 100%;
+        background: pink;
+        float: none;
+    }
+}
+@media (min-width: 450px) and (max-width: 750px) {
+    header,
+    footer {
+        height: 15%;
+        background: violet;
+    }
+    section.primary,
+    section.secondary {
+        width: 100%;
+        background: lightcoral;
+        float: none;
+    }
+}
+@media (min-width: 750px) and (max-width: 1000px) {
+    header,
+    footer {
+        height: 20%;
+        background: bisque;
+    }
+    section.primary,
+    section.secondary {
+        background: cornflowerblue;
+    }
+}

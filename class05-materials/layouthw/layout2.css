@@ -1,0 +1,26 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid black;
+    margin: 0 0;
+}
+header {
+    height:100px;
+}
+.sec1 {
+    height: 150px;
+}
+.sec2 .art1 {
+    display: inline-block;
+    width: 33.3333%;
+    height: 200px;
+}
+.sec2 .art2 {
+    display: inline-block;
+    width: 66.6666%;
+    height: 200px;
+}
+footer {
+    height: 100px;
+}

@@ -1,0 +1,25 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid black;
+    margin: 0 0;
+}
+header {
+    height: 100px;
+}
+article {
+    height:300px;
+    display: inline-block;
+}
+.art1,
+.art3,
+.art4 {
+    width: 20%;
+}
+.art2 {
+    width: 40%;
+}
+footer {
+    height: 100px;
+}

@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    position: relative;
+    height: 100%;
+    font-size: 62.5%;
+}
+body {
+    height: 100%;
+}
+header,
+footer {
+    height: 25%;
+    border: .2rem solid black;
+    clear: both;
+}
+section {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    height: 50%;
+    width: 20%;
+    border: .2rem solid black;
+    float: left;
+}
+.big {
+    width: 40%;
+}
+@media screen and (max-width:400px) {
+    header,
+    footer {
+        background:indigo;
+        height: 15%;
+    }
+    section.modal {
+        background: greenyellow;
+        float: none;
+        width: 100%;
+    }
+}
+@media (min-width: 400px) and (max-width:750px) {
+    header,
+    footer {
+        height: 18%;
+        background: maroon;
+    }
+    section,
+    section.modal {
+        width: 50%;
+        background: silver;
+    }
+}
+@media (min-width: 750px) and (max-width: 1000px) {
+    header,
+    footer {
+        height: 20%;
+        background: grey;
+    }
+    section {
+        height: 60%;
+        background: burlywood;
+    }
+}
