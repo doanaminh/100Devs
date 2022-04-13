@@ -1,0 +1,128 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+html {
+  height: 100%;
+}
+body {
+  font-family: 'Source Code Pro', monospace;
+  height: 100%;
+  background: black;
+  position: relative;
+  display: flex;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  top: -6%;
+  width: 100%;
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: gainsboro;
+  font-size: .76rem;
+  background: rgba(0,0,0,0.3);
+  padding: 0 0 2% 0;
+}
+/*
+input CSS
+*/
+::-webkit-datetime-edit { display: none; }
+::-webkit-datetime-edit-fields-wrapper { display: contents; }
+::-webkit-datetime-edit-text { display: contents;}
+::-webkit-datetime-edit-month-field { display: contents;}
+::-webkit-datetime-edit-day-field { display: contents; }
+::-webkit-datetime-edit-year-field { display: contents; }
+::-webkit-inner-spin-button { display: contents; }
+::-webkit-calendar-picker-indicator {  width: 100%; text-align: center;}
+nav input {
+  width: 100%;
+}
+
+header:hover {
+  transition: all .5s;
+  height: auto;
+  opacity: 1;
+  top: 0;
+}
+
+.instructions {
+  position: absolute;
+  color: gainsboro;
+  font-size: 3rem;
+  padding: 0 15%;
+  align-self: center;
+  line-height: 5rem;
+}
+span {
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% { 
+    opacity: 0;
+  }
+}
+.hidden {
+  display: none;
+}
+
+.background {
+  position: relative;
+}
+
+img{
+  height: auto;
+  width: 100vw;
+}
+iframe {
+  width: auto;
+  height: auto;
+}
+
+.data {
+  color: gainsboro;
+  position: fixed;
+  top: 93%;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: .3;
+  font-family: 'Source Code Pro', monospace;
+}
+.data:hover {
+  transition: all .7s;
+  top: 0;
+  opacity: 1;
+  backdrop-filter: blur(5px);
+}
+.title {
+  font-size: 1.5rem;
+  height: auto;
+}
+.explanation {
+  height: 85vh;
+  font-size: 1rem;
+  padding: 0 5%;
+  line-height: 2.2rem;
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
