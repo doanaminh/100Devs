@@ -135,10 +135,20 @@
 // getPaid()
 
 //Code 08
+<<<<<<< HEAD
 // async function getACuteDogPhoto(){
 //     const res = await fetch('https://dog.ceo/api/breeds/image/random')
 //     const data = await res.json()
 //     console.log(data)
 // }
 // getACuteDogPhoto()
+=======
+async function getACuteDogPhoto(){
+    const res = await fetch('https://dog.ceo/api/breeds/image/random');
+    const data = await res.json();
+    document.querySelector('img').src = data.message;
+    console.log(data.message);
+}
+getACuteDogPhoto()
+>>>>>>> 97765f2255be4e12ce3dfb597c10517c38dba94d
 
