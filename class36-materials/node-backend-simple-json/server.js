@@ -2,12 +2,11 @@ const http = require('http');
 const fs = require('fs')
 const url = require('url');
 const querystring = require('querystring');
-const figlet = require('figlet')
+const figlet = require('figlet');
+const path = require('path');
 
 const server = http.createServer((req, res) => {
-  const page = url.parse(req.url).pathname;
-  const params = querystring.parse(url.parse(req.url).query);
-  console.log(page);
+
 
   // Build file path
   let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
@@ -30,9 +29,12 @@ const server = http.createServer((req, res) => {
       contentType = 'application/json';
   };
 
+  const params = querystring.parse(url.parse(req.url).query);
+
   // read file
-  fs.readFile(filePath, (err, content) => {
+  fs.readFile((filePath), (err, content) => {
     console.log(`File Path: ${filePath}`);
+    console.log(params);
 
     if (err) {
       if (err.code == 'ENOENT') {
@@ -51,14 +53,41 @@ const server = http.createServer((req, res) => {
         res.writeHead(500);
         res.end(`Server Error:  ${err.code}`);
       }
-    } else {
+    } else if (filePath == '/api') {
+      if('student' in params){
+            if(params['student']== 'leon'){
+              res.writeHead(200, {'Content-Type': 'application/json'});
+              const objToJson = {
+                name: "leon",
+                status: "Boss Man",
+                currentOccupation: "Baller"
+              }
+              res.end(JSON.stringify(objToJson));
+            }//student = leon
+            else if(params['student'] != 'leon'){
+              res.writeHead(200, {'Content-Type': 'application/json'});
+              const objToJson = {
+                name: "unknown",
+                status: "unknown",
+                currentOccupation: "unknown"
+              }
+              res.end(JSON.stringify(objToJson));
+            }//student != leon
+          }//student if
+    }else {
       // success
       res.writeHead(200, { 'Content-Type': contentType });
       res.end(content, 'utf8');
     }
   });
 
+// =====================================================================
 
+  // const page = url.parse(req.url).pathname;
+  // const params = querystring.parse(url.parse(req.url).query);
+  // console.log(page);
+  // console.log(params);
+  
   // if (page == '/') {
   //   fs.readFile('index.html', function(err, data) {
   //     res.writeHead(200, {'Content-Type': 'text/html'});
@@ -129,4 +158,4 @@ const server = http.createServer((req, res) => {
 
 const PORT = process.env.PORT || 8000;
 
-server.listen(PORT, _ => console.log(`Server runnign on port ${PORT}`));
+server.listen(PORT, _ => console.log(`Server running on port ${PORT}`));
